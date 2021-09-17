@@ -1,6 +1,8 @@
 const routes = require('express').Router()
 const routesUser = require('./user')
 const routesProduct = require('./product')
+const routesOreder = require('./order')
+const routesPayment = require('./payment')
 
 routes.get('/', (req,res,next) =>{
     res.send('hello world')
@@ -8,5 +10,7 @@ routes.get('/', (req,res,next) =>{
 
 routes.use('/users', routesUser)
 routes.use('/products', routesProduct)
+routes.use('/orders', routesOreder)
+routes.use('/payments', routesPayment)
 
 module.exports = routes
