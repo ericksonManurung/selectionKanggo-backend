@@ -1,0 +1,66 @@
+### Register
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "name": "reni",
+    "email": "reni@gmail.com",
+    "password": "12345678"
+}
+
+### Login
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "reni@gmail.com",
+    "password": "12345678"
+}
+
+
+
+################### Product ###################
+
+### Get Product
+GET http://localhost:3000/products/
+Content-Type: application/json
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
+
+
+### Post Product
+POST  http://localhost:3000/products/
+Content-Type: application/json
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
+
+{
+    "name": "Meja",
+    "price": 500000,
+    "qty": 10
+}
+
+
+### Put Product
+PUT http://localhost:3000/products/6
+Content-Type: application/json
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
+
+{
+    "name": "Kursi",
+    "price": 300000,
+    "qty": 18
+}
+
+
+### Delete Product
+DELETE http://localhost:3000/products/5
+Content-Type: application/json
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
+
+
+
+################### Order ###################
+
+### Get Product
+GET http://localhost:3000/products/
+Content-Type: application/json
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
