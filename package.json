@@ -4,7 +4,11 @@
   "description": "this repository for selection Kanggo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "db:teardown": "sequelize-cli db:drop",
+    "db:setup": "sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
+    "db:magic": "npm run db:teardown && npm run db:setup && npm run dev"
   },
   "repository": {
     "type": "git",
