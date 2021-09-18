@@ -38,8 +38,8 @@ class ProductControllers {
     static deleteProduct (req,res,next) {
         const {id} = req.params
         MasterProduct.destroy({where:{id}})
-        .then((data) => {
-            res.status(200).json({success:"true", message:"success delete data"})
+        .then((_) => {
+            res.status(200).json({success:"true", message:"success delete Product"})
         }).catch((err) => {
             console.log(err)
             next(err)
