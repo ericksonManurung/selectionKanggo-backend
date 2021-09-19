@@ -1,8 +1,8 @@
-const { User, MasterProduct, OrderTransaction } = require('../models')
+const { User, MasterProduct, OrderTransaction, Payment } = require('../models')
 const jwt = require('jsonwebtoken')
 
 const authentication = (req,res,next) => {
-
+    
     // if without access token
     if (!req.headers.access_token) {
         throw{ name: "MISSING_ACCESS_TOKEN" }  
@@ -22,7 +22,7 @@ const authentication = (req,res,next) => {
             }
             next()
         }).catch((err) => {
-            consol.log(err)
+            console.log(err)
             next(err)
         });
     }
@@ -47,7 +47,6 @@ const authorizationProduct = (req,res,next) => {
 
 const authorizationOrder = (req,res,next) => {
     const {id} = req.params
-    console.log(id)
     OrderTransaction.findOne({where:{id, UserId: req.UserId}})
     .then((order) => {
         if(!order){
@@ -64,6 +63,16 @@ const authorizationOrder = (req,res,next) => {
 
 const authorizationPayment = (req,res,next) => {
     const {id} = req.params
+    OrderTransaction.findOne({where:{id, UserId: req.UserId}})
+    .then((order) => {
+        if(!order){
+            throw{ name: "DATA_NOT_FOUND"}
+        }
+        next()
+    }).catch((err) => {
+        console.log(err)
+        next(err)
+    });
 
 }
 

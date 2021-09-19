@@ -20,7 +20,7 @@ const errorHandler = (err,req,res,next) => {
             break;
         case 'MISSING_USER':
             errStatus = 401
-            errMsg.push('User tidak ditemukan')
+            errMsg.push('user not found')
             break;
         case 'AUTHORIZATION_NOT_VALID':
             errStatus = 401

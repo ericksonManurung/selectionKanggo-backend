@@ -63,27 +63,27 @@ Content-Type: application/json
 ### Get orders
 GET http://localhost:3000/orders/
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE
+# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNjQxMjR9.s2-myuYTPJ_hoABLLrqqcRPP4FR09pr9agVDyjkchxo
 
 
 ### Post Order
 POST http://localhost:3000/orders/
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE
+# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNjQxMjR9.s2-myuYTPJ_hoABLLrqqcRPP4FR09pr9agVDyjkchxo
 
 {
-    "MasterProductId": 2,
+    "MasterProductId": 1,
     "amount": 1
 }
 
 
 ### Delete Order
-DELETE http://localhost:3000/orders/3
+DELETE http://localhost:3000/orders/4
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE
+# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE
 
 
 
@@ -91,7 +91,7 @@ access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrI
 
 ############################# PAYMENTS PAYMENTS PAYMENTS PAYMENTS PAYMENTS #############################
 
-PATCH http://localhost:3000/payments/3
+PATCH http://localhost:3000/payments/4
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE
+# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNjM3Mzd9.Taa9HHeHYFD1P5HI6DCMXRdBW17zC0AclZ2rERFuwJI

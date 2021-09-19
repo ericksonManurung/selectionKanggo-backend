@@ -28,7 +28,7 @@ class PaymentController {
             return Payment.create({ order_id: id, amount, status })
         }).then((data) => {
             // insert table payment
-            res.status(200).json({succes:true, message:"proccess payment success",data})
+            res.status(200).json({succes:true, message:"proccess payment success"})
         }).catch((err) => {
             console.log(err)
             next(err)
