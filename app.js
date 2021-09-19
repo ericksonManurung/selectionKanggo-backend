@@ -1,7 +1,8 @@
-require('dotenv').config()
+if(process.env.NODE_ENV === 'development') require('dotenv').config() //open this if you want run in prod
+// require('dotenv').config() //open this if you want run in development
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 const cors = require('cors')
 const routes = require('./routes')
 const errorHandler = require('./middlewares/errorHandler')
