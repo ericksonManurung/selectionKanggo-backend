@@ -11,9 +11,8 @@ routes.get('/', (req,res,next) =>{
 })
 
 routes.use('/users', routesUser)
-routes.use(authentication)
-
 routes.use('/products', routesProduct)
+routes.use(authentication)
 routes.use('/orders', routesOreder)
 routes.use('/payments', routesPayment)
 

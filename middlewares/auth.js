@@ -1,21 +1,24 @@
-const { User, OrderTransaction } = require('../models')
+const { User, MasterProduct, OrderTransaction } = require('../models')
 const jwt = require('jsonwebtoken')
 
 const authentication = (req,res,next) => {
+
+    // if without access token
     if (!req.headers.access_token) {
-        console.log('missiong access token')    
+        throw{ name: "MISSING_ACCESS_TOKEN" }  
     }else{
         try{
             const decode = jwt.verify(req.headers.access_token, process.env.JWT_SECREAT)
-            req.user_id = decode.id
+            req.UserId = decode.id
         }catch(err){
-            console.log("access not valid")
+            // access token valid or wrong
+            throw{ name: "INVALID_ACCESS_TOKEN" } 
         }
 
-        User.findByPk(req.user_id)
+        User.findByPk(req.UserId)
         .then((user) => {
             if(!user){
-                console.log('missing User')
+                throw{ name: "MISSING_USER" } 
             }
             next()
         }).catch((err) => {
@@ -26,21 +29,42 @@ const authentication = (req,res,next) => {
 }
 
 
-const authorizationOrder = (req,res,next) => {
+const authorizationProduct = (req,res,next) => {
     const {id} = req.params
-    
-    OrderTransaction.findOne({where:{id, user_id: req.user_id}})
-    .then((order) => {
-        if(!order){
-            console.log("data tidak di temukan")
-        }else{
-            req.order = order
-            next()
+    MasterProduct.findOne({where:{id}})
+    .then((product) => {
+        if(!product){
+            throw{ name: "DATA_NOT_FOUND"}
         }
+        next()
     }).catch((err) => {
         console.log(err)
         next(err)
     });
 }
 
-module.exports = { authentication, authorizationOrder }
+
+
+const authorizationOrder = (req,res,next) => {
+    const {id} = req.params
+    console.log(id)
+    OrderTransaction.findOne({where:{id, UserId: req.UserId}})
+    .then((order) => {
+        if(!order){
+            throw{ name: "DATA_NOT_FOUND"}
+        }
+        req.order = order
+        next()
+    }).catch((err) => {
+        console.log(err)
+        next(err)
+    });
+}
+
+
+const authorizationPayment = (req,res,next) => {
+    const {id} = req.params
+
+}
+
+module.exports = { authentication, authorizationProduct, authorizationOrder, authorizationPayment }

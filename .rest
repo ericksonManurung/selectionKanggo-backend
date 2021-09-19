@@ -20,42 +20,39 @@ Content-Type: application/json
 
 
 
+
 ############################# PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT #############################
 
 ### Get Product
 GET http://localhost:3000/products/
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
 
 
 ### Post Product
 POST  http://localhost:3000/products/
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
 
 {
-    "name": "Monitor",
-    "price": 5750000,
-    "qty": 6
+    "name": "Mouse",
+    "price": 2100000,
+    "qty": 3
 }
 
 
 ### Put Product
-PUT http://localhost:3000/products/6
+PUT http://localhost:3000/products/4
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
 
 {
-    "name": "Kursi",
-    "price": 300000,
-    "qty": 18
+    "name": "Hardisk",
+    "price": 9600000,
+    "qty": 4
 }
 
 
 ### Delete Product
 DELETE http://localhost:3000/products/5
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE4ODk4Mjl9.cNuFUw5duuwMq3g7062meZXBry_b48JQK0bDJmwGE4Q
 
 
 
@@ -63,45 +60,38 @@ access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiL
 
 ############################# ORDER ORDER ORDER ORDER ORDER #############################
 
-### Get Product
+### Get orders
 GET http://localhost:3000/orders/
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMxOTgxNDIzfQ.Y3OonlIhBkN9oZGyh1DUUdQfFnFYFrksijP_VyIczOA
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImJheXUiLCJpYXQiOjE2MzE5ODE0NDZ9.a-HoNfjPCSAnEl6MP-kjNx5FVhgxiRD4t65EnLnnqog
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE5ODE0NzB9.TUpdguIvfRaLyumWx3v-wfvIAn0hP2F8a6h6iF5loVw
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
+# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE
+
 
 ### Post Order
 POST http://localhost:3000/orders/
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMxOTgxNDIzfQ.Y3OonlIhBkN9oZGyh1DUUdQfFnFYFrksijP_VyIczOA
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImJheXUiLCJpYXQiOjE2MzE5ODE0NDZ9.a-HoNfjPCSAnEl6MP-kjNx5FVhgxiRD4t65EnLnnqog
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE5ODE0NzB9.TUpdguIvfRaLyumWx3v-wfvIAn0hP2F8a6h6iF5loVw
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
+# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE
 
 {
-    "product_id": 1,
-    "amount": 1,
-    "status": "pending"
-}
-
-
-### Put Order
-
-POST http://localhost:3000/orders/
-Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMxOTgxNDIzfQ.Y3OonlIhBkN9oZGyh1DUUdQfFnFYFrksijP_VyIczOA
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImJheXUiLCJpYXQiOjE2MzE5ODE0NDZ9.a-HoNfjPCSAnEl6MP-kjNx5FVhgxiRD4t65EnLnnqog
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE5ODE0NzB9.TUpdguIvfRaLyumWx3v-wfvIAn0hP2F8a6h6iF5loVw
-
-{
-    "product_id": 1,
-    "amount": 1,
-    "status": "pending"
+    "MasterProductId": 2,
+    "amount": 1
 }
 
 
 ### Delete Order
-DELETE http://localhost:3000/orders/9
+DELETE http://localhost:3000/orders/3
 Content-Type: application/json
-access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMxOTgxNDIzfQ.Y3OonlIhBkN9oZGyh1DUUdQfFnFYFrksijP_VyIczOA
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImJheXUiLCJpYXQiOjE2MzE5ODE0NDZ9.a-HoNfjPCSAnEl6MP-kjNx5FVhgxiRD4t65EnLnnqog
-# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InJlbmkiLCJpYXQiOjE2MzE5ODE0NzB9.TUpdguIvfRaLyumWx3v-wfvIAn0hP2F8a6h6iF5loVw
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
+# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE
+
+
+
+
+
+############################# PAYMENTS PAYMENTS PAYMENTS PAYMENTS PAYMENTS #############################
+
+PATCH http://localhost:3000/payments/3
+Content-Type: application/json
+access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVyaWNrIiwiaWF0IjoxNjMyMDI4NjI2fQ.V6z2HFV5pKtylW97vCHVHJfSVw_J9Lv2mMgeYWLzdoA
+# access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InJlbmkiLCJpYXQiOjE2MzIwNTM5ODV9.pQQYYcuKS7Vp3RUWd6_5mFb3PeVSIIfzHkYxOlvYWSE

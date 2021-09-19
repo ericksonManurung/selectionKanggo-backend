@@ -8,10 +8,10 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    queryInterface.addConstraint('OrderTransactions', {
-      fields: ['user_id'],
+     await queryInterface.addConstraint('OrderTransactions', {
+      fields: ['UserId'],
       type: 'foreign key',
-      name: 'fkey_user_id_OrderTransactions',
+      name: 'fkey_UserId_OrderTransactions',
       references: { //Required field
         table: 'Users',
         field: 'id'
@@ -20,10 +20,11 @@ module.exports = {
       onUpdate: 'cascade'
     });
 
-    queryInterface.addConstraint('OrderTransactions', {
-      fields: ['product_id'],
+
+    await queryInterface.addConstraint('OrderTransactions', {
+      fields: ['MasterProductId'],
       type: 'foreign key',
-      name: 'fkey_product_id_OrderTransactions',
+      name: 'fkey_MasterProductId_OrderTransactions',
       references: { //Required field
         table: 'MasterProducts',
         field: 'id'
@@ -31,7 +32,6 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade'
     });
-
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -42,7 +42,7 @@ module.exports = {
      * await queryInterface.dropTable('users');
      */
 
-    queryInterface.removeConstraint('OrderTransactions', 'fkey_user_id_OrderTransactions')
-    queryInterface.removeConstraint('OrderTransactions', 'fkey_product_id_OrderTransactions')
+     await queryInterface.removeConstraint('OrderTransactions', 'fkey_UserId_OrderTransactions')
+     await queryInterface.removeConstraint('OrderTransactions', 'fkey_MasterProductId_OrderTransactions')
   }
 };

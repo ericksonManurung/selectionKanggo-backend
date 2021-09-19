@@ -12,9 +12,36 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Payment.init({
-    order_id: DataTypes.INTEGER,
-    status: DataTypes.STRING,
-    amount: DataTypes.INTEGER
+    order_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: "order_id payment null!!"
+        }
+      }
+    },
+    status: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: "status payment null!!"
+        }
+      }
+    },
+    amount: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: "amount payment null!!"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Payment',

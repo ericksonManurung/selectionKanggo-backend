@@ -1,9 +1,9 @@
-const { OrderTransaction } = require('../models')
+const { OrderTransaction, MasterProduct } = require('../models')
 
 class OrderController {
 
     static getOrder (req,res,next) {
-        OrderTransaction.findAll({where:{user_id: req.user_id}})
+        OrderTransaction.findAll({where:{UserId: req.UserId}})
         .then((order) => {
             res.status(200).json({success: true, data: order})
         }).catch((err) => {
@@ -13,9 +13,15 @@ class OrderController {
     }
 
     static postOrder (req,res,next) {
-        const {product_id, amount, status} = req.body
-        OrderTransaction.create({product_id, amount, status, user_id: req.user_id})
-        .then((order) => {
+        const {MasterProductId, amount} = req.body
+        MasterProduct.findAll({where:{id:MasterProductId}})
+        .then((product) => {
+            const qty = product[0].dataValues.qty
+            if(qty < amount){
+                throw{ name: "STOCK_NOT_ENOUGH"}
+            }
+            return OrderTransaction.create({MasterProductId, amount, status:"pending", UserId: req.UserId})
+        }).then((order) => {
             res.status(201).json({data: order})
         }).catch((err) => {
             console.log(err)
