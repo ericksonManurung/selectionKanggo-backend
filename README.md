@@ -1,4 +1,4 @@
-# Selection for Kanggo (Back End)
+# Selection for Kanggo (Back-End-Developer)
 
 ## INSTALL PACKAGE
 * bcryptjs
@@ -10,6 +10,9 @@
 
 ## Base URL for server development
 http://localhost:3000/
+
+## Base URL for Production
+https://kanggo-back-end.herokuapp.com
 
 ## End Points
 * POST/users/register
@@ -23,11 +26,12 @@ http://localhost:3000/
 * DELETE/orders/:id
 * PATCH/payments/:id
 
-## Set Up
+## Set Up Local
 After clone repository<br/>
 open viscode or another text editor and then open terminal<br/>
 enter to folder selectionKanggo-backend type <i>"cd selectionKanggo-backend"</i><br/>
 install all dependecies type <i>"npm i"</i><br/>
+open file app.js then comment line number 1. after that uncomment line number 2<br/>
 and then type <i>"npm run db:magic</i>" (make sure you already install Postgres into your PC or laptop)<br/>
 
 

@@ -1,15 +1,17 @@
 ### Register
-POST http://localhost:3000/users/register
+# POST http://localhost:3000/users/register
+POST https://kanggo-back-end.herokuapp.com/users/register
 Content-Type: application/json
 
 {
-    "name": "reni",
+    "name": "",
     "email": "reni@gmail.com",
-    "password": "12345678"
+    "password": "123456"
 }
 
 ### Login
-POST http://localhost:3000/users/login
+POST https://kanggo-back-end.herokuapp.com/users/login
+# POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
@@ -29,13 +31,14 @@ Content-Type: application/json
 
 
 ### Post Product
-POST  http://localhost:3000/products/
+POST https://kanggo-back-end.herokuapp.com/products
+# POST  http://localhost:3000/products/
 Content-Type: application/json
 
 {
-    "name": "Mouse",
-    "price": 2100000,
-    "qty": 3
+    "name": "Laptop",
+    "price": 12000000,
+    "qty": 10
 }
 
 
